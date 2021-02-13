@@ -1,3 +1,4 @@
+/*Contact Details*/
 public class ContactDetails {
 
 	private String firstName, lastName, address, city, state, email, zip, phoneNumber ;
