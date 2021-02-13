@@ -1,14 +1,3 @@
-import java.util.ArrayList;
-
-public class AddressBook {
-
-	public ArrayList<ContactDetails> contactList = new ArrayList<>();
-
-	public  ArrayList<ContactDetails> contactList(ContactDetails cd){
-		contactList.add(cd);
-		return contactList;
-	}
-
 import java.util.*;
 
 public class AddressBook {
@@ -121,4 +110,24 @@ public class AddressBook {
 		else
 			return false;
 	}
+
+
+	public boolean deleteContact(String name) {
+		int flag = 0;
+		for(ContactDetails contact: contactList)
+		{
+			if(contact.getFirstName().equals(name))
+			{
+				contactList.remove(contact);
+				flag = 1;
+				break;
+			}
+		}
+		if(flag==1)
+			return true;
+		else
+			return false;
+	}
+
+
 }
